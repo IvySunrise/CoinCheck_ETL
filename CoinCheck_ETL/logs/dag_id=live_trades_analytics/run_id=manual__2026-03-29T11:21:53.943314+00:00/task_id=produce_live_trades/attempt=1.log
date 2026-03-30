@@ -1,0 +1,27 @@
+[2026-03-29T11:21:56.073+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:21:56.163+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T11:21:53.943314+00:00 [queued]>
+[2026-03-29T11:21:56.172+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T11:21:53.943314+00:00 [queued]>
+[2026-03-29T11:21:56.173+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:21:56.189+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_live_trades> on 2026-03-29 11:21:53.943314+00:00
+[2026-03-29T11:21:56.205+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=211) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:21:56.208+0000] {standard_task_runner.py:63} INFO - Started process 214 to run task
+[2026-03-29T11:21:56.204+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'produce_live_trades', 'manual__2026-03-29T11:21:53.943314+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmp7lzr9j3x']
+[2026-03-29T11:21:56.209+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask produce_live_trades
+[2026-03-29T11:21:56.240+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:21:56.300+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T11:21:53.943314+00:00 [running]> on host 02a713b558cd
+[2026-03-29T11:21:56.436+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_live_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T11:21:53.943314+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T11:21:53.943314+00:00'
+[2026-03-29T11:21:56.437+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:21:56.470+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.3', 9092)]>: connecting to broker1:9092 [('172.18.0.3', 9092) IPv4]
+[2026-03-29T11:21:56.628+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 9092)]>: Broker version identified as 2.6
+[2026-03-29T11:21:56.632+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.3', 9092)]>: Connection complete.
+[2026-03-29T11:21:57.531+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T11:21:57.532+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T11:21:57.532+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.3', 9092)]>: Closing connection. 
+[2026-03-29T11:21:57.666+0000] {logging_mixin.py:188} INFO - 10 live trades sent to market.trades
+[2026-03-29T11:21:57.669+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T11:21:57.676+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:21:57.678+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:21:57.696+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=produce_live_trades, run_id=manual__2026-03-29T11:21:53.943314+00:00, execution_date=20260329T112153, start_date=20260329T112156, end_date=20260329T112157
+[2026-03-29T11:21:57.727+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:21:57.754+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:21:57.756+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,43 @@
+[2026-03-29T12:14:24.005+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:14:24.105+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T12:14:21.684834+00:00 [queued]>
+[2026-03-29T12:14:24.113+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T12:14:21.684834+00:00 [queued]>
+[2026-03-29T12:14:24.113+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:14:24.127+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): stream_csv_to_staging> on 2026-03-29 12:14:21.684834+00:00
+[2026-03-29T12:14:24.147+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=284) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:14:24.149+0000] {standard_task_runner.py:63} INFO - Started process 288 to run task
+[2026-03-29T12:14:24.147+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'stream_csv_to_staging', 'manual__2026-03-29T12:14:21.684834+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp17_mvav9']
+[2026-03-29T12:14:24.154+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask stream_csv_to_staging
+[2026-03-29T12:14:24.180+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:14:24.240+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T12:14:21.684834+00:00 [running]> on host 8536c3ac8533
+[2026-03-29T12:14:24.466+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='stream_csv_to_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T12:14:21.684834+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T12:14:21.684834+00:00'
+[2026-03-29T12:14:24.467+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:14:24.601+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:14:25.088+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T12:14:25.093+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:14:25.391+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T12:14:25.393+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T12:14:25.394+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T12:14:25.591+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T12:14:25.706+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T12:14:25.830+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T12:14:25.959+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:14:26.119+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:14:26.244+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:14:26.252+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:14:26.264+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T12:14:26.266+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T12:14:26.341+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T12:14:26.477+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T12:14:26.483+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T12:14:26.595+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T12:14:26.599+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T12:14:26.698+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:14:28.311+0000] {logging_mixin.py:188} INFO - All 4 trades from CSV sent to market.trades
+[2026-03-29T12:14:28.312+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T12:14:28.312+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T12:14:28.313+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:14:28.313+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:14:28.323+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=stream_csv_to_staging, run_id=manual__2026-03-29T12:14:21.684834+00:00, execution_date=20260329T121421, start_date=20260329T121424, end_date=20260329T121428
+[2026-03-29T12:14:28.343+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:14:28.363+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:14:28.364+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

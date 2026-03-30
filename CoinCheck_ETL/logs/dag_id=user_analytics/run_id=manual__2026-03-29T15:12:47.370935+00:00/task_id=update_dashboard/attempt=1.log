@@ -1,0 +1,30 @@
+[2026-03-29T15:13:22.347+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T15:13:22.390+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.update_dashboard manual__2026-03-29T15:12:47.370935+00:00 [queued]>
+[2026-03-29T15:13:22.398+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.update_dashboard manual__2026-03-29T15:12:47.370935+00:00 [queued]>
+[2026-03-29T15:13:22.398+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T15:13:22.413+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): update_dashboard> on 2026-03-29 15:12:47.370935+00:00
+[2026-03-29T15:13:22.427+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=334) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T15:13:22.429+0000] {standard_task_runner.py:63} INFO - Started process 339 to run task
+[2026-03-29T15:13:22.434+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'update_dashboard', 'manual__2026-03-29T15:12:47.370935+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpdg2ipqm5']
+[2026-03-29T15:13:22.436+0000] {standard_task_runner.py:91} INFO - Job 25: Subtask update_dashboard
+[2026-03-29T15:13:22.455+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T15:13:22.503+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.update_dashboard manual__2026-03-29T15:12:47.370935+00:00 [running]> on host 8dbda78c73fd
+[2026-03-29T15:13:22.666+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='update_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T15:12:47.370935+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T15:12:47.370935+00:00'
+[2026-03-29T15:13:22.667+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T15:13:22.688+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T15:13:22.697+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2026-03-29T15:13:22.697+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T15:13:22.803+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T15:13:22.804+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T15:13:22.805+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T15:13:22.808+0000] {logging_mixin.py:188} INFO - Sent: {'id': 1, 'amount': 0.01, 'rate': 5000000.0, 'pair': 'btc_jpy', 'order_type': 'buy', 'created_at': '2024-01-01T00:00:00Z'}
+[2026-03-29T15:13:23.310+0000] {logging_mixin.py:188} INFO - Sent: {'id': 2, 'amount': 0.02, 'rate': 5001000.0, 'pair': 'btc_jpy', 'order_type': 'sell', 'created_at': '2024-01-01T00:00:01Z'}
+[2026-03-29T15:13:23.810+0000] {logging_mixin.py:188} INFO - Sent: {'id': 3, 'amount': 0.015, 'rate': 4999000.0, 'pair': 'btc_jpy', 'order_type': 'buy', 'created_at': '2024-01-01T00:00:02Z'}
+[2026-03-29T15:13:24.312+0000] {logging_mixin.py:188} INFO - Sent: {'id': 4, 'amount': 0.03, 'rate': 5002000.0, 'pair': 'btc_jpy', 'order_type': 'sell', 'created_at': '2024-01-01T00:00:03Z'}
+[2026-03-29T15:13:24.817+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T15:13:24.818+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T15:13:24.818+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T15:13:24.839+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=update_dashboard, run_id=manual__2026-03-29T15:12:47.370935+00:00, execution_date=20260329T151247, start_date=20260329T151322, end_date=20260329T151324
+[2026-03-29T15:13:24.878+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T15:13:24.917+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T15:13:24.922+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

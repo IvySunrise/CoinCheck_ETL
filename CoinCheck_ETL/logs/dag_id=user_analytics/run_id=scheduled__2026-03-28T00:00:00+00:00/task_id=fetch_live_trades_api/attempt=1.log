@@ -1,0 +1,117 @@
+[2026-03-29T11:02:13.697+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:02:13.850+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:02:13.871+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:02:13.871+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:02:13.907+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_live_trades_api> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:02:13.944+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=331) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:02:13.948+0000] {standard_task_runner.py:63} INFO - Started process 339 to run task
+[2026-03-29T11:02:13.951+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'fetch_live_trades_api', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp4z_dpg19']
+[2026-03-29T11:02:13.968+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask fetch_live_trades_api
+[2026-03-29T11:02:14.013+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:02:14.259+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [running]> on host 25c208e06e73
+[2026-03-29T11:02:14.578+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='fetch_live_trades_api' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:02:14.585+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:02:14.747+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T11:02:14.816+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2026-03-29T11:02:14.822+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T11:02:15.634+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T11:02:15.642+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T11:02:15.644+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T11:02:15.670+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T11:02:15.813+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T11:02:15.931+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T11:02:16.048+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T11:02:16.177+0000] {logging_mixin.py:188} INFO - 10 live trades sent to market.trades
+[2026-03-29T11:02:16.177+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T11:02:16.180+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:02:16.182+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:02:16.204+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=fetch_live_trades_api, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T110213, end_date=20260329T110216
+[2026-03-29T11:02:16.279+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:02:16.329+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:02:16.336+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T11:10:55.132+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:10:55.265+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:10:55.289+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:10:55.290+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:10:55.324+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_live_trades_api> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:10:55.353+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=409) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:10:55.355+0000] {standard_task_runner.py:63} INFO - Started process 413 to run task
+[2026-03-29T11:10:55.362+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'fetch_live_trades_api', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpglwusc_c']
+[2026-03-29T11:10:55.368+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask fetch_live_trades_api
+[2026-03-29T11:10:55.402+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:10:55.495+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [running]> on host 02a713b558cd
+[2026-03-29T11:10:55.956+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='fetch_live_trades_api' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:10:55.968+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:10:56.010+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T11:10:56.027+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2026-03-29T11:10:56.030+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T11:10:56.981+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T11:10:56.983+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T11:10:56.984+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T11:10:57.041+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T11:10:57.042+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T11:10:57.095+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T11:10:57.096+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T11:10:57.157+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T11:10:57.373+0000] {logging_mixin.py:188} INFO - 10 live trades sent to market.trades
+[2026-03-29T11:10:57.374+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T11:10:57.379+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T11:10:57.382+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:10:57.387+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:10:57.416+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=fetch_live_trades_api, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T111055, end_date=20260329T111057
+[2026-03-29T11:10:57.452+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:10:57.483+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:10:57.485+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T11:54:58.518+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:54:58.629+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:54:58.643+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:54:58.643+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:54:58.685+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_live_trades_api> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:54:58.717+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=739) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:54:58.720+0000] {standard_task_runner.py:63} INFO - Started process 751 to run task
+[2026-03-29T11:54:58.715+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'fetch_live_trades_api', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmppdjse2w5']
+[2026-03-29T11:54:58.727+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask fetch_live_trades_api
+[2026-03-29T11:54:58.775+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:54:58.847+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [running]> on host 18bc553606fe
+[2026-03-29T11:54:59.035+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='fetch_live_trades_api' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:54:59.037+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:54:59.110+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T11:54:59.124+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T11:54:59.126+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T11:54:59.394+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T11:54:59.396+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T11:54:59.397+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T11:54:59.416+0000] {logging_mixin.py:188} INFO - 10 live trades sent to market.trades
+[2026-03-29T11:54:59.417+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T11:54:59.422+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:54:59.425+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:54:59.469+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=fetch_live_trades_api, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T115458, end_date=20260329T115459
+[2026-03-29T11:54:59.590+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:54:59.710+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:54:59.717+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:05:37.857+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:05:38.053+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:05:38.128+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:05:38.129+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:05:38.176+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_live_trades_api> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:05:38.219+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=306) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:05:38.225+0000] {standard_task_runner.py:63} INFO - Started process 319 to run task
+[2026-03-29T12:05:38.220+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'fetch_live_trades_api', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp4qphkij3']
+[2026-03-29T12:05:38.233+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask fetch_live_trades_api
+[2026-03-29T12:05:38.345+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:05:38.527+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.fetch_live_trades_api scheduled__2026-03-28T00:00:00+00:00 [running]> on host 446454d9da59
+[2026-03-29T12:05:39.001+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='fetch_live_trades_api' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:05:39.006+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:05:39.104+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:05:39.123+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T12:05:39.125+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:05:40.016+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:05:40.016+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:05:40.017+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T12:05:40.034+0000] {logging_mixin.py:188} INFO - 10 live trades sent to market.trades
+[2026-03-29T12:05:40.037+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T12:05:40.043+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:05:40.050+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:05:40.076+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=fetch_live_trades_api, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T120538, end_date=20260329T120540
+[2026-03-29T12:05:40.134+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:05:40.160+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

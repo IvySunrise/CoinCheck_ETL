@@ -1,0 +1,40 @@
+[2026-03-29T13:53:56.750+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:53:56.800+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.merge_datasets manual__2026-03-29T13:53:31.131930+00:00 [queued]>
+[2026-03-29T13:53:56.810+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.merge_datasets manual__2026-03-29T13:53:31.131930+00:00 [queued]>
+[2026-03-29T13:53:56.810+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:53:56.826+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): merge_datasets> on 2026-03-29 13:53:31.131930+00:00
+[2026-03-29T13:53:56.847+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=343) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:53:56.850+0000] {standard_task_runner.py:63} INFO - Started process 346 to run task
+[2026-03-29T13:53:56.846+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'merge_datasets', 'manual__2026-03-29T13:53:31.131930+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp3qzh9lpc']
+[2026-03-29T13:53:56.853+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask merge_datasets
+[2026-03-29T13:53:56.876+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:53:56.927+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.merge_datasets manual__2026-03-29T13:53:31.131930+00:00 [running]> on host 3171732d1af6
+[2026-03-29T13:53:57.055+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='merge_datasets' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T13:53:31.131930+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T13:53:31.131930+00:00'
+[2026-03-29T13:53:57.059+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:53:57.077+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:53:57.078+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/user_analytics.py", line 30, in merge_datasets
+    market_state = pd.DataFrame()
+                   ^^
+NameError: name 'pd' is not defined
+[2026-03-29T13:53:57.095+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=user_analytics, task_id=merge_datasets, run_id=manual__2026-03-29T13:53:31.131930+00:00, execution_date=20260329T135331, start_date=20260329T135356, end_date=20260329T135357
+[2026-03-29T13:53:57.118+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 18 for task merge_datasets (name 'pd' is not defined; 346)
+[2026-03-29T13:53:57.145+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-29T13:53:57.198+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:53:57.211+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

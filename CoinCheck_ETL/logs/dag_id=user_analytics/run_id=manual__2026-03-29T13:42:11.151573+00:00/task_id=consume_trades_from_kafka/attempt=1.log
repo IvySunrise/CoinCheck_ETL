@@ -1,0 +1,47 @@
+[2026-03-29T13:42:23.528+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:42:23.758+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.consume_trades_from_kafka manual__2026-03-29T13:42:11.151573+00:00 [queued]>
+[2026-03-29T13:42:23.836+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.consume_trades_from_kafka manual__2026-03-29T13:42:11.151573+00:00 [queued]>
+[2026-03-29T13:42:23.839+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:42:23.929+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): consume_trades_from_kafka> on 2026-03-29 13:42:11.151573+00:00
+[2026-03-29T13:42:23.986+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:42:23.997+0000] {standard_task_runner.py:63} INFO - Started process 430 to run task
+[2026-03-29T13:42:23.987+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'consume_trades_from_kafka', 'manual__2026-03-29T13:42:11.151573+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpdoo17lt3']
+[2026-03-29T13:42:24.004+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask consume_trades_from_kafka
+[2026-03-29T13:42:24.089+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:42:24.229+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.consume_trades_from_kafka manual__2026-03-29T13:42:11.151573+00:00 [running]> on host 81ff4a14db57
+[2026-03-29T13:42:24.761+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='consume_trades_from_kafka' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T13:42:11.151573+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T13:42:11.151573+00:00'
+[2026-03-29T13:42:24.762+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:42:24.783+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=bootstrap-1 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T13:42:24.791+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=bootstrap-1 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2026-03-29T13:42:24.792+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T13:42:24.794+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('market.trades',)
+[2026-03-29T13:42:24.805+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker2:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T13:42:24.806+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T13:42:24.807+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T13:42:24.915+0000] {cluster.py:403} INFO - Coordinator for group/live-consumer-group is ('coordinator-1', 'broker1', 9092, None)
+[2026-03-29T13:42:24.918+0000] {base.py:835} INFO - Discovered coordinator coordinator-1 for group live-consumer-group
+[2026-03-29T13:42:24.919+0000] {base.py:895} INFO - Starting new heartbeat thread
+[2026-03-29T13:42:24.921+0000] {consumer.py:379} INFO - Revoking previously assigned partitions () for group live-consumer-group
+[2026-03-29T13:42:24.924+0000] {base.py:433} INFO - Failed to join group live-consumer-group: NodeNotReadyError: coordinator-1
+[2026-03-29T13:42:24.927+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker1:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T13:42:24.933+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T13:42:25.034+0000] {base.py:546} INFO - (Re-)joining group live-consumer-group
+[2026-03-29T13:42:25.042+0000] {base.py:661} INFO - Received member id kafka-python-2.3.0-fa706e93-418c-475d-b874-b1c4b7b83cfc for group live-consumer-group; will retry join-group
+[2026-03-29T13:42:25.043+0000] {base.py:433} INFO - Failed to join group live-consumer-group: [Error 79] MemberIdRequiredError
+[2026-03-29T13:42:25.044+0000] {base.py:546} INFO - (Re-)joining group live-consumer-group
+[2026-03-29T13:42:29.799+0000] {base.py:1130} INFO - Stopping heartbeat thread
+[2026-03-29T13:42:29.799+0000] {base.py:943} INFO - Leaving consumer group live-consumer-group (member kafka-python-2.3.0-fa706e93-418c-475d-b874-b1c4b7b83cfc).
+[2026-03-29T13:42:30.659+0000] {base.py:617} INFO - Successfully joined group live-consumer-group <Generation 1 (member_id: kafka-python-2.3.0-fa706e93-418c-475d-b874-b1c4b7b83cfc, protocol: range)>
+[2026-03-29T13:42:30.674+0000] {base.py:961} INFO - LeaveGroup request for group live-consumer-group returned successfully
+[2026-03-29T13:42:30.676+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T13:42:30.677+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T13:42:30.679+0000] {base.py:592} ERROR - Error sending SyncGroupRequest_v3 to node coordinator-1 [Cancelled: <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>]
+[2026-03-29T13:42:30.679+0000] {base.py:857} WARNING - Marking the coordinator dead (node coordinator-1) for group live-consumer-group: Cancelled: <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>.
+[2026-03-29T13:42:30.679+0000] {base.py:433} INFO - Failed to join group live-consumer-group: Cancelled: <BrokerConnection client_id=kafka-python-2.3.0, node_id=coordinator-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>
+[2026-03-29T13:42:30.680+0000] {logging_mixin.py:188} INFO - No messages found in Kafka topic.
+[2026-03-29T13:42:30.680+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:42:30.686+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:42:30.742+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=consume_trades_from_kafka, run_id=manual__2026-03-29T13:42:11.151573+00:00, execution_date=20260329T134211, start_date=20260329T134223, end_date=20260329T134230
+[2026-03-29T13:42:30.841+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:42:31.000+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:42:31.005+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

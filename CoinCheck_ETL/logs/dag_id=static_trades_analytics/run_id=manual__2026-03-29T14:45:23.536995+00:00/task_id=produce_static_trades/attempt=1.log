@@ -1,0 +1,32 @@
+[2026-03-29T14:45:25.604+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:45:25.644+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades manual__2026-03-29T14:45:23.536995+00:00 [queued]>
+[2026-03-29T14:45:25.653+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades manual__2026-03-29T14:45:23.536995+00:00 [queued]>
+[2026-03-29T14:45:25.653+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:45:25.666+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-29 14:45:23.536995+00:00
+[2026-03-29T14:45:25.681+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=281) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:45:25.685+0000] {standard_task_runner.py:63} INFO - Started process 286 to run task
+[2026-03-29T14:45:25.682+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'manual__2026-03-29T14:45:23.536995+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmp0ngvt6rj']
+[2026-03-29T14:45:25.687+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_static_trades
+[2026-03-29T14:45:25.747+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:45:25.869+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades manual__2026-03-29T14:45:23.536995+00:00 [running]> on host cd359a9f83a6
+[2026-03-29T14:45:26.126+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T14:45:23.536995+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T14:45:23.536995+00:00'
+[2026-03-29T14:45:26.129+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:45:26.185+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker1:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T14:45:26.231+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2026-03-29T14:45:26.231+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T14:45:27.020+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker1:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T14:45:27.022+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T14:45:27.025+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T14:45:27.266+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.403+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.532+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.652+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T14:45:27.772+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.988+0000] {logging_mixin.py:188} INFO - 10 trades sent to market.trades
+[2026-03-29T14:45:27.992+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T14:45:28.010+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:45:28.018+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:45:28.063+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=manual__2026-03-29T14:45:23.536995+00:00, execution_date=20260329T144523, start_date=20260329T144525, end_date=20260329T144528
+[2026-03-29T14:45:28.152+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:45:28.267+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:45:28.276+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

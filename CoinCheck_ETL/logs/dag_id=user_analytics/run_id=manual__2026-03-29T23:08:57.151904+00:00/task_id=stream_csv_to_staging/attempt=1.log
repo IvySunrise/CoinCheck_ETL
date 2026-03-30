@@ -1,0 +1,36 @@
+[2026-03-29T23:09:02.513+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:09:02.693+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T23:08:57.151904+00:00 [queued]>
+[2026-03-29T23:09:02.725+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T23:08:57.151904+00:00 [queued]>
+[2026-03-29T23:09:02.727+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:09:02.785+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): stream_csv_to_staging> on 2026-03-29 23:08:57.151904+00:00
+[2026-03-29T23:09:02.829+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'stream_csv_to_staging', 'manual__2026-03-29T23:08:57.151904+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpgr_0gxyk']
+[2026-03-29T23:09:02.841+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask stream_csv_to_staging
+[2026-03-29T23:09:02.863+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=361) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:09:02.864+0000] {standard_task_runner.py:63} INFO - Started process 386 to run task
+[2026-03-29T23:09:02.886+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:09:03.027+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.stream_csv_to_staging manual__2026-03-29T23:08:57.151904+00:00 [running]> on host 90473cbdc518
+[2026-03-29T23:09:03.242+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='stream_csv_to_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T23:08:57.151904+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T23:08:57.151904+00:00'
+[2026-03-29T23:09:03.246+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:09:03.309+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T23:09:03.499+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T23:09:03.504+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T23:09:03.658+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker1:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T23:09:03.663+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T23:09:03.664+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T23:09:03.863+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.004+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.243+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.448+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.565+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.706+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:04.860+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:05.012+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:05.130+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T23:09:07.255+0000] {logging_mixin.py:188} INFO - All 4 trades from CSV sent to market.trades
+[2026-03-29T23:09:07.262+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T23:09:07.266+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:09:07.267+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:09:07.326+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=stream_csv_to_staging, run_id=manual__2026-03-29T23:08:57.151904+00:00, execution_date=20260329T230857, start_date=20260329T230902, end_date=20260329T230907
+[2026-03-29T23:09:07.429+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:09:07.615+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:09:07.629+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

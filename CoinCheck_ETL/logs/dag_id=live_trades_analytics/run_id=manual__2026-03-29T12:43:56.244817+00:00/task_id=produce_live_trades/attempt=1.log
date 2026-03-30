@@ -1,0 +1,71 @@
+[2026-03-29T12:43:59.086+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:43:59.203+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T12:43:56.244817+00:00 [queued]>
+[2026-03-29T12:43:59.231+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T12:43:56.244817+00:00 [queued]>
+[2026-03-29T12:43:59.232+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:43:59.265+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_live_trades> on 2026-03-29 12:43:56.244817+00:00
+[2026-03-29T12:43:59.292+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:43:59.300+0000] {standard_task_runner.py:63} INFO - Started process 231 to run task
+[2026-03-29T12:43:59.300+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'produce_live_trades', 'manual__2026-03-29T12:43:56.244817+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmphns7zsz7']
+[2026-03-29T12:43:59.317+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_live_trades
+[2026-03-29T12:43:59.413+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:43:59.527+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.produce_live_trades manual__2026-03-29T12:43:56.244817+00:00 [running]> on host 33686ea88615
+[2026-03-29T12:43:59.796+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_live_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T12:43:56.244817+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-29T12:43:56.244817+00:00'
+[2026-03-29T12:43:59.799+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:44:00.093+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:44:00.375+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T12:44:00.380+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:44:01.744+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T12:44:01.745+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T12:44:01.746+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T12:44:01.769+0000] {cluster.py:318} ERROR - Topic market.trades not found in cluster metadata
+[2026-03-29T12:44:01.890+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:44:02.006+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:44:02.122+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T12:44:02.227+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:44:02.228+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/live_user_analytics.py", line 14, in produce_live_trades
+    public_trades_producer(True)
+  File "/app/kafka_tutorial/public_producer.py", line 64, in public_trades_producer
+    producer.send(topic, trade)
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 849, in send
+    value_bytes = self._serialize(
+                  ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 982, in _serialize
+    return f(data)
+           ^^^^^^^
+  File "/app/kafka_tutorial/public_producer.py", line 37, in <lambda>
+    value_serializer=lambda v: json.dumps(v).encode("utf-8")
+                               ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+[2026-03-29T12:44:02.245+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=live_trades_analytics, task_id=produce_live_trades, run_id=manual__2026-03-29T12:43:56.244817+00:00, execution_date=20260329T124356, start_date=20260329T124359, end_date=20260329T124402
+[2026-03-29T12:44:02.261+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 2 for task produce_live_trades (Object of type datetime is not JSON serializable; 231)
+[2026-03-29T12:44:02.286+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-29T12:44:02.311+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:44:02.314+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

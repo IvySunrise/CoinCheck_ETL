@@ -1,0 +1,92 @@
+[2026-03-30T00:42:16.443+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-30T00:42:16.507+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging scheduled__2026-03-29T00:00:00+00:00 [queued]>
+[2026-03-30T00:42:16.519+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.stream_csv_to_staging scheduled__2026-03-29T00:00:00+00:00 [queued]>
+[2026-03-30T00:42:16.519+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-30T00:42:16.543+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): stream_csv_to_staging> on 2026-03-29 00:00:00+00:00
+[2026-03-30T00:42:16.572+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=184) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-30T00:42:16.574+0000] {standard_task_runner.py:63} INFO - Started process 214 to run task
+[2026-03-30T00:42:16.570+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'stream_csv_to_staging', 'scheduled__2026-03-29T00:00:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpth5d2lk_']
+[2026-03-30T00:42:16.576+0000] {standard_task_runner.py:91} INFO - Job 27: Subtask stream_csv_to_staging
+[2026-03-30T00:42:16.599+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-30T00:42:16.643+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.stream_csv_to_staging scheduled__2026-03-29T00:00:00+00:00 [running]> on host 17cff4ce87d9
+[2026-03-30T00:42:16.862+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='stream_csv_to_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-03-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-29T00:00:00+00:00'
+[2026-03-30T00:42:16.866+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-30T00:42:16.923+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:16.924+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:16.927+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:16.953+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:16.954+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:16.955+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:16.971+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:16.972+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:16.972+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:16.987+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:16.988+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:16.988+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:16.989+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.07 secs
+[2026-03-30T00:42:17.075+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.076+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:17.078+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.091+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.093+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:17.095+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.096+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.13 secs
+[2026-03-30T00:42:17.236+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.236+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:17.236+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.237+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.05 secs
+[2026-03-30T00:42:17.300+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.301+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:17.302+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.303+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.37 secs
+[2026-03-30T00:42:17.699+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.700+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:17.701+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.760+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:17.762+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:17.764+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:17.765+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.65 secs
+[2026-03-30T00:42:18.452+0000] {conn.py:1530} WARNING - DNS lookup failed for broker2:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:18.452+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: DNS lookup failed for broker2:9092 (0)
+[2026-03-30T00:42:18.452+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:18.453+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.03 secs
+[2026-03-30T00:42:18.502+0000] {conn.py:1530} WARNING - DNS lookup failed for broker1:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2026-03-30T00:42:18.503+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: DNS lookup failed for broker1:9092 (0)
+[2026-03-30T00:42:18.503+0000] {conn.py:951} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=broker1:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2026-03-30T00:42:18.504+0000] {client_async.py:1051} WARNING - No node available during check_version; sleeping 0.40 secs
+[2026-03-30T00:42:18.900+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-30T00:42:18.904+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/user_analytics.py", line 20, in stream_csv_to_staging
+    simulate_trades_from_csv("/app/kafka_tutorial/trades.csv")
+  File "/app/kafka_tutorial/public_producer.py", line 149, in simulate_trades_from_csv
+    producer = KafkaProducer(
+               ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 485, in __init__
+    client = self.config['kafka_client'](
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 1076, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2026-03-30T00:42:19.127+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=user_analytics, task_id=stream_csv_to_staging, run_id=scheduled__2026-03-29T00:00:00+00:00, execution_date=20260329T000000, start_date=20260330T004216, end_date=20260330T004219
+[2026-03-30T00:42:19.197+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 27 for task stream_csv_to_staging (NoBrokersAvailable; 214)
+[2026-03-30T00:42:19.271+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-30T00:42:19.300+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

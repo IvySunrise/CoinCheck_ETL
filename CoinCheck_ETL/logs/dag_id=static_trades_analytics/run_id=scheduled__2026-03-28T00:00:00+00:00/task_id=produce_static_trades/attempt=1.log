@@ -1,0 +1,175 @@
+[2026-03-29T14:45:25.608+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:45:25.649+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:45:25.657+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:45:25.657+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:45:25.672+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:45:25.688+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=280) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:45:25.691+0000] {standard_task_runner.py:63} INFO - Started process 287 to run task
+[2026-03-29T14:45:25.690+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmp2ac5s9ub']
+[2026-03-29T14:45:25.700+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask produce_static_trades
+[2026-03-29T14:45:25.791+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:45:25.940+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host cd359a9f83a6
+[2026-03-29T14:45:26.132+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:45:26.133+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:45:26.185+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T14:45:26.238+0000] {conn.py:622} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2026-03-29T14:45:26.240+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T14:45:27.029+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to broker2:9092 [('172.18.0.6', 9092) IPv4]
+[2026-03-29T14:45:27.033+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2026-03-29T14:45:27.034+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-1 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T14:45:27.173+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.304+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.425+0000] {conn.py:400} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to broker1:9092 [('172.18.0.5', 9092) IPv4]
+[2026-03-29T14:45:27.428+0000] {conn.py:461} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2026-03-29T14:45:27.502+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T14:45:27.506+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T14:45:27.622+0000] {sender.py:518} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Got error produce response on topic-partition ('market.trades', 0), retrying (inf attempts left): type
+[2026-03-29T14:45:27.624+0000] {sender.py:544} WARNING - <Sender client_id=kafka-python-producer-1 transactional_id=None>: Received unknown topic or partition error in produce request on partition ('market.trades', 0). The topic/partition may not exist or the user may not have Describe access to it
+[2026-03-29T14:45:27.653+0000] {cluster.py:315} WARNING - Topic market.trades is not available during auto-create initialization
+[2026-03-29T14:45:27.970+0000] {logging_mixin.py:188} INFO - 10 trades sent to market.trades
+[2026-03-29T14:45:27.975+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=2 host=broker2:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2026-03-29T14:45:27.981+0000] {conn.py:951} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=broker1:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2026-03-29T14:45:28.013+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:45:28.019+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:45:28.062+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T144525, end_date=20260329T144528
+[2026-03-29T14:45:28.184+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:45:28.245+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T15:07:12.306+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T15:07:12.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:07:12.465+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:07:12.466+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T15:07:12.499+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T15:07:12.526+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=487) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T15:07:12.531+0000] {standard_task_runner.py:63} INFO - Started process 493 to run task
+[2026-03-29T15:07:12.527+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmpqqz1anzy']
+[2026-03-29T15:07:12.537+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_static_trades
+[2026-03-29T15:07:12.573+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T15:07:12.646+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host 2d6484d95a15
+[2026-03-29T15:07:12.918+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T15:07:12.926+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T15:07:13.055+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T15:07:13.056+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/static_user_analytics.py", line 23, in produce_static_trades
+    writer = csv.DictWriter(f, fieldnames=trades[0].keys())
+             ^^^
+NameError: name 'csv' is not defined. Did you forget to import 'csv'
+[2026-03-29T15:07:13.093+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T150712, end_date=20260329T150713
+[2026-03-29T15:07:13.119+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 2 for task produce_static_trades (name 'csv' is not defined; 493)
+[2026-03-29T15:07:13.157+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-29T15:07:13.228+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T15:07:13.243+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T15:12:48.712+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T15:12:48.824+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:12:48.859+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:12:48.860+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T15:12:49.015+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T15:12:49.054+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=243) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T15:12:49.055+0000] {standard_task_runner.py:63} INFO - Started process 249 to run task
+[2026-03-29T15:12:49.058+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmpm4i63ec5']
+[2026-03-29T15:12:49.065+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask produce_static_trades
+[2026-03-29T15:12:49.113+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T15:12:49.253+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host 8dbda78c73fd
+[2026-03-29T15:12:49.696+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T15:12:49.699+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T15:12:49.863+0000] {logging_mixin.py:188} INFO - Static trades written to /opt/***/temp/static_trades.csv
+[2026-03-29T15:12:49.863+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T15:12:49.866+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T15:12:49.895+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T151248, end_date=20260329T151249
+[2026-03-29T15:12:50.031+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T15:12:50.139+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T15:12:50.144+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T22:51:08.348+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T22:51:08.448+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T22:51:08.461+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T22:51:08.462+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T22:51:08.479+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T22:51:08.491+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=623) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T22:51:08.494+0000] {standard_task_runner.py:63} INFO - Started process 630 to run task
+[2026-03-29T22:51:08.492+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmpnmi4jj0j']
+[2026-03-29T22:51:08.496+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_static_trades
+[2026-03-29T22:51:08.514+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T22:51:08.564+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host df8f2fa6a7f4
+[2026-03-29T22:51:08.813+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T22:51:08.815+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T22:51:08.917+0000] {logging_mixin.py:188} INFO - Static trades written to /opt/***/temp/static_trades.csv
+[2026-03-29T22:51:08.917+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T22:51:08.917+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T22:51:08.931+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T225108, end_date=20260329T225108
+[2026-03-29T22:51:08.998+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T22:51:09.028+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T22:51:09.030+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:00:33.365+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:00:33.491+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:00:33.509+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:00:33.510+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:00:33.538+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:00:33.567+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=265) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:00:33.569+0000] {standard_task_runner.py:63} INFO - Started process 281 to run task
+[2026-03-29T23:00:33.571+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmppdrj24ar']
+[2026-03-29T23:00:33.585+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask produce_static_trades
+[2026-03-29T23:00:33.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:00:33.776+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host 6b3b88b70881
+[2026-03-29T23:00:34.180+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:00:34.187+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:00:34.299+0000] {logging_mixin.py:188} INFO - Static trades written to /opt/***/temp/static_trades.csv
+[2026-03-29T23:00:34.300+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:00:34.300+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:00:34.330+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T230033, end_date=20260329T230034
+[2026-03-29T23:00:34.416+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:00:34.489+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:00:34.496+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:09:00.162+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:09:00.377+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:09:00.417+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:09:00.417+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:09:00.471+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:09:00.531+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=353) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:09:00.523+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmpdqtu3adi']
+[2026-03-29T23:09:00.534+0000] {standard_task_runner.py:63} INFO - Started process 375 to run task
+[2026-03-29T23:09:00.534+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_static_trades
+[2026-03-29T23:09:00.611+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:09:00.763+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host 90473cbdc518
+[2026-03-29T23:09:01.119+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:09:01.124+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:09:01.249+0000] {logging_mixin.py:188} INFO - Static trades written to /opt/***/temp/static_trades.csv
+[2026-03-29T23:09:01.251+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:09:01.254+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:09:01.293+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T230900, end_date=20260329T230901
+[2026-03-29T23:09:01.361+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:09:01.471+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:09:01.480+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:22:10.255+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:22:10.477+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:22:10.504+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:22:10.505+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:22:10.550+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): produce_static_trades> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:22:10.588+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=617) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:22:10.595+0000] {standard_task_runner.py:63} INFO - Started process 637 to run task
+[2026-03-29T23:22:10.585+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'static_trades_analytics', 'produce_static_trades', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/static_user_analytics.py', '--cfg-path', '/tmp/tmpg1iiyvng']
+[2026-03-29T23:22:10.601+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask produce_static_trades
+[2026-03-29T23:22:10.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:22:10.741+0000] {task_command.py:426} INFO - Running <TaskInstance: static_trades_analytics.produce_static_trades scheduled__2026-03-28T00:00:00+00:00 [running]> on host 17cff4ce87d9
+[2026-03-29T23:22:11.030+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='static_trades_analytics' AIRFLOW_CTX_TASK_ID='produce_static_trades' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:22:11.033+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:22:11.180+0000] {logging_mixin.py:188} INFO - Static trades written to /opt/***/temp/static_trades.csv
+[2026-03-29T23:22:11.181+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:22:11.182+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:22:11.217+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=static_trades_analytics, task_id=produce_static_trades, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T232210, end_date=20260329T232211
+[2026-03-29T23:22:11.340+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:22:11.400+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

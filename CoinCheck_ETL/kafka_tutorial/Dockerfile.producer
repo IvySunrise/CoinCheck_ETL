@@ -1,0 +1,18 @@
+# Use Python 3.12 as base
+FROM python:3.12
+
+# Set working directory
+WORKDIR /app
+
+# Copy application code
+COPY . /app
+
+# Install required Python packages
+RUN pip install --no-cache-dir kafka-python
+
+RUN pip install kafka-python requests
+
+COPY trades.csv /app/
+
+# Start the producer scripts
+CMD ["python", "-u", "public_producer.py"]

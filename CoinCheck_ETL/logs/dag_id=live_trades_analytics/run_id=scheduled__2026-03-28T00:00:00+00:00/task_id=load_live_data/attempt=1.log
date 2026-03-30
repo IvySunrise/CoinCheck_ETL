@@ -1,0 +1,199 @@
+[2026-03-29T11:22:11.588+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:22:11.633+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:22:11.643+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:22:11.643+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:22:11.658+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:22:11.671+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=242) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:22:11.673+0000] {standard_task_runner.py:63} INFO - Started process 246 to run task
+[2026-03-29T11:22:11.677+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmp6u12y8ms']
+[2026-03-29T11:22:11.681+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask load_live_data
+[2026-03-29T11:22:11.714+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:22:11.766+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 02a713b558cd
+[2026-03-29T11:22:11.912+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:22:11.916+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:22:11.944+0000] {logging_mixin.py:188} INFO - Loaded data to /tmp/***/data/live_final.csv
+[2026-03-29T11:22:11.945+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:22:11.945+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:22:11.961+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T112211, end_date=20260329T112211
+[2026-03-29T11:22:12.010+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:22:12.033+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:22:12.037+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:05:54.553+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:05:54.682+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:05:54.718+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:05:54.718+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:05:54.766+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:05:54.795+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=365) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:05:54.804+0000] {standard_task_runner.py:63} INFO - Started process 373 to run task
+[2026-03-29T12:05:54.797+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmp139_6rk9']
+[2026-03-29T12:05:54.808+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask load_live_data
+[2026-03-29T12:05:54.854+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:05:54.902+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 446454d9da59
+[2026-03-29T12:05:55.174+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:05:55.175+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:05:55.223+0000] {logging_mixin.py:188} INFO - Loaded data to /tmp/***/data/live_final.csv
+[2026-03-29T12:05:55.226+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:05:55.227+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:05:55.253+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T120554, end_date=20260329T120555
+[2026-03-29T12:05:55.312+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:05:55.336+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:05:55.338+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:14:52.059+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:14:52.145+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:14:52.164+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:14:52.164+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:14:52.217+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:14:52.290+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=350) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:14:52.303+0000] {standard_task_runner.py:63} INFO - Started process 360 to run task
+[2026-03-29T12:14:52.292+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmppm0w2pkh']
+[2026-03-29T12:14:52.308+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask load_live_data
+[2026-03-29T12:14:52.379+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:14:52.471+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 8536c3ac8533
+[2026-03-29T12:14:52.671+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:14:52.674+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:14:52.741+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T12:14:52.743+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:14:52.744+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:14:52.768+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T121452, end_date=20260329T121452
+[2026-03-29T12:14:52.825+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:14:52.898+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:14:52.907+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:08:01.894+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:08:01.956+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:08:01.975+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:08:01.978+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:08:02.000+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:08:02.025+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=394) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:08:02.032+0000] {standard_task_runner.py:63} INFO - Started process 397 to run task
+[2026-03-29T13:08:02.028+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmpfj4cs21j']
+[2026-03-29T13:08:02.038+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask load_live_data
+[2026-03-29T13:08:02.075+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:08:02.171+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 1e95fe724f77
+[2026-03-29T13:08:02.362+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:08:02.364+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:08:02.388+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T13:08:02.389+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:08:02.390+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:08:02.403+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T130801, end_date=20260329T130802
+[2026-03-29T13:08:02.453+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:08:02.467+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:08:02.469+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:14:54.345+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:14:54.494+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:14:54.537+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:14:54.538+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:14:54.645+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:14:54.732+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:14:54.751+0000] {standard_task_runner.py:63} INFO - Started process 367 to run task
+[2026-03-29T13:14:54.737+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmpasl7z_el']
+[2026-03-29T13:14:54.770+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask load_live_data
+[2026-03-29T13:14:54.946+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:14:55.161+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 32aebd3e7a73
+[2026-03-29T13:14:55.759+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:14:55.763+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:14:55.875+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T13:14:55.878+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:14:55.879+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:14:55.916+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T131454, end_date=20260329T131455
+[2026-03-29T13:14:56.023+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:14:56.088+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:14:56.091+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:42:41.095+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:42:41.150+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:42:41.159+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:42:41.159+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:42:41.174+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:42:41.203+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=474) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:42:41.205+0000] {standard_task_runner.py:63} INFO - Started process 478 to run task
+[2026-03-29T13:42:41.206+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmpy7ivfktt']
+[2026-03-29T13:42:41.214+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask load_live_data
+[2026-03-29T13:42:41.248+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:42:41.326+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 81ff4a14db57
+[2026-03-29T13:42:41.652+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:42:41.657+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:42:41.707+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T13:42:41.708+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:42:41.710+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:42:41.735+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T134241, end_date=20260329T134241
+[2026-03-29T13:42:41.790+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:42:41.986+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:42:41.990+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:59:04.636+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:59:04.891+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:59:04.981+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:59:04.982+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:59:05.052+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:59:05.113+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=341) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:59:05.114+0000] {standard_task_runner.py:63} INFO - Started process 362 to run task
+[2026-03-29T13:59:05.108+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmp5tf5jyw_']
+[2026-03-29T13:59:05.122+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask load_live_data
+[2026-03-29T13:59:05.181+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:59:05.289+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 39eebc6a16f6
+[2026-03-29T13:59:05.551+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:59:05.557+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:59:05.613+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T13:59:05.614+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:59:05.618+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:59:05.634+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T135904, end_date=20260329T135905
+[2026-03-29T13:59:05.706+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:59:05.781+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:59:05.785+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:11:42.327+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:11:42.983+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:11:43.102+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:11:43.102+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:11:43.125+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:11:43.194+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=402) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:11:43.202+0000] {standard_task_runner.py:63} INFO - Started process 412 to run task
+[2026-03-29T14:11:43.196+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmphm3zlfgd']
+[2026-03-29T14:11:43.208+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask load_live_data
+[2026-03-29T14:11:43.285+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:11:43.500+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 310a149ce3a7
+[2026-03-29T14:11:43.912+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:11:43.919+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:11:44.034+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T14:11:44.034+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:11:44.035+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:11:44.074+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T141143, end_date=20260329T141144
+[2026-03-29T14:11:44.175+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:11:44.207+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:17:24.947+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:17:25.132+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:17:25.178+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:17:25.181+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:17:25.294+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:17:25.333+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=270) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:17:25.346+0000] {standard_task_runner.py:63} INFO - Started process 277 to run task
+[2026-03-29T14:17:25.332+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmpei6mnjpo']
+[2026-03-29T14:17:25.356+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask load_live_data
+[2026-03-29T14:17:25.428+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:17:25.624+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 78e230e6b695
+[2026-03-29T14:17:26.122+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:17:26.125+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:17:26.210+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T14:17:26.211+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:17:26.213+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:17:26.241+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T141725, end_date=20260329T141726
+[2026-03-29T14:17:26.302+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:17:26.361+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:17:26.365+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:33:05.342+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:33:05.495+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:33:05.529+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:33:05.531+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:33:05.743+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_live_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:33:05.828+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=396) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:33:05.833+0000] {standard_task_runner.py:63} INFO - Started process 403 to run task
+[2026-03-29T14:33:05.835+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'live_trades_analytics', 'load_live_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/live_user_analytics.py', '--cfg-path', '/tmp/tmp_cz62wwt']
+[2026-03-29T14:33:05.849+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask load_live_data
+[2026-03-29T14:33:05.929+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:33:06.122+0000] {task_command.py:426} INFO - Running <TaskInstance: live_trades_analytics.load_live_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 3942be4b0136
+[2026-03-29T14:33:06.448+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='live_trades_analytics' AIRFLOW_CTX_TASK_ID='load_live_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:33:06.452+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:33:06.538+0000] {logging_mixin.py:188} INFO - Loaded data to /opt/***/temp/live_final.csv
+[2026-03-29T14:33:06.539+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:33:06.541+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:33:06.610+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=live_trades_analytics, task_id=load_live_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T143305, end_date=20260329T143306
+[2026-03-29T14:33:06.797+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:33:06.908+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:33:06.921+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

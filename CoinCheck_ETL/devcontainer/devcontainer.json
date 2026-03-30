@@ -1,0 +1,8 @@
+{
+  "postStartCommand": "bash /CoinCheck_ETL/devcontainer/startscript.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2":{
+    "dockerUser": "codespaces"
+    }
+  }
+}

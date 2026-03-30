@@ -1,0 +1,420 @@
+[2026-03-29T11:02:39.733+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:02:39.795+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:02:39.806+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:02:39.807+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:02:39.829+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:02:39.849+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=382) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:02:39.850+0000] {standard_task_runner.py:63} INFO - Started process 385 to run task
+[2026-03-29T11:02:39.847+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp99tbudil']
+[2026-03-29T11:02:39.853+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask clean_trade_data
+[2026-03-29T11:02:39.879+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:02:39.932+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 25c208e06e73
+[2026-03-29T11:02:40.067+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:02:40.068+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:02:40.169+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T11:02:40.170+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:02:40.170+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:02:40.185+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T110239, end_date=20260329T110240
+[2026-03-29T11:02:40.231+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:02:40.267+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:02:40.269+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T11:11:13.703+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:11:13.755+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:11:13.765+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:11:13.765+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:11:13.794+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:11:13.817+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=437) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:11:13.822+0000] {standard_task_runner.py:63} INFO - Started process 439 to run task
+[2026-03-29T11:11:13.819+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp5jkf0jn9']
+[2026-03-29T11:11:13.825+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask clean_trade_data
+[2026-03-29T11:11:13.887+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:11:13.943+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 02a713b558cd
+[2026-03-29T11:11:14.033+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:11:14.034+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:11:14.120+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T11:11:14.121+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:11:14.121+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:11:14.130+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T111113, end_date=20260329T111114
+[2026-03-29T11:11:14.165+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:11:14.188+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:11:14.189+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T11:55:20.902+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T11:55:20.990+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:55:21.010+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T11:55:21.011+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T11:55:21.040+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T11:55:21.066+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=818) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T11:55:21.071+0000] {standard_task_runner.py:63} INFO - Started process 823 to run task
+[2026-03-29T11:55:21.069+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp91zgr8qv']
+[2026-03-29T11:55:21.077+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask clean_trade_data
+[2026-03-29T11:55:21.111+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T11:55:21.199+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 18bc553606fe
+[2026-03-29T11:55:21.382+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T11:55:21.383+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T11:55:21.438+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T11:55:21.439+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T11:55:21.439+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T11:55:21.463+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T115520, end_date=20260329T115521
+[2026-03-29T11:55:21.535+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T11:55:21.645+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T11:55:21.649+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:06:02.571+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:06:02.645+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:06:02.672+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:06:02.673+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:06:02.696+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:06:02.715+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=385) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:06:02.719+0000] {standard_task_runner.py:63} INFO - Started process 390 to run task
+[2026-03-29T12:06:02.715+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpkn3i3yku']
+[2026-03-29T12:06:02.721+0000] {standard_task_runner.py:91} INFO - Job 21: Subtask clean_trade_data
+[2026-03-29T12:06:02.749+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:06:02.816+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 446454d9da59
+[2026-03-29T12:06:03.030+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:06:03.033+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:06:03.094+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T12:06:03.094+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:06:03.095+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:06:03.111+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T120602, end_date=20260329T120603
+[2026-03-29T12:06:03.139+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:06:03.194+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:06:03.197+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:14:53.429+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:14:53.554+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:14:53.574+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:14:53.578+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:14:53.654+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:14:53.671+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:14:53.673+0000] {standard_task_runner.py:63} INFO - Started process 369 to run task
+[2026-03-29T12:14:53.708+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpq04i_den']
+[2026-03-29T12:14:53.714+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T12:14:53.768+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:14:53.852+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 8536c3ac8533
+[2026-03-29T12:14:54.320+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:14:54.322+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:14:54.435+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T12:14:54.438+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:14:54.439+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:14:54.458+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T121453, end_date=20260329T121454
+[2026-03-29T12:14:54.542+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:14:54.588+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:14:54.593+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:32:08.247+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:32:08.334+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:32:08.370+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:32:08.371+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:32:08.410+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:32:08.432+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=246) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:32:08.437+0000] {standard_task_runner.py:63} INFO - Started process 251 to run task
+[2026-03-29T12:32:08.435+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpv6z4ihjf']
+[2026-03-29T12:32:08.448+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask clean_trade_data
+[2026-03-29T12:32:08.500+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:32:08.595+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host e31b54ad1341
+[2026-03-29T12:32:08.833+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:32:08.836+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:32:08.876+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T12:32:08.877+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:32:08.878+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:32:08.894+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T123208, end_date=20260329T123208
+[2026-03-29T12:32:08.949+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:32:08.995+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:32:09.002+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T12:44:24.670+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T12:44:24.708+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:44:24.717+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T12:44:24.718+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T12:44:24.728+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T12:44:24.738+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=281) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T12:44:24.739+0000] {standard_task_runner.py:63} INFO - Started process 283 to run task
+[2026-03-29T12:44:24.738+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp9dp5z64k']
+[2026-03-29T12:44:24.741+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask clean_trade_data
+[2026-03-29T12:44:24.758+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T12:44:24.793+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 33686ea88615
+[2026-03-29T12:44:24.878+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T12:44:24.879+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T12:44:24.989+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T12:44:24.989+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T12:44:24.990+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T12:44:25.002+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T124424, end_date=20260329T124425
+[2026-03-29T12:44:25.036+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T12:44:25.061+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T12:44:25.062+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:08:04.373+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:08:04.428+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:08:04.450+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:08:04.451+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:08:04.507+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:08:04.544+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=399) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:08:04.547+0000] {standard_task_runner.py:63} INFO - Started process 408 to run task
+[2026-03-29T13:08:04.545+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp6r9c6a_v']
+[2026-03-29T13:08:04.553+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T13:08:04.635+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:08:04.752+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 1e95fe724f77
+[2026-03-29T13:08:04.935+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:08:04.938+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:08:05.058+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T13:08:05.060+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:08:05.061+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:08:05.086+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T130804, end_date=20260329T130805
+[2026-03-29T13:08:05.184+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:08:05.267+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:08:05.271+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:14:56.598+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:14:56.686+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:14:56.704+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:14:56.705+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:14:56.736+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:14:56.762+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=364) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:14:56.765+0000] {standard_task_runner.py:63} INFO - Started process 370 to run task
+[2026-03-29T13:14:56.763+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpbcz2be69']
+[2026-03-29T13:14:56.772+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask clean_trade_data
+[2026-03-29T13:14:56.808+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:14:56.920+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 32aebd3e7a73
+[2026-03-29T13:14:57.201+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:14:57.202+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:14:57.296+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T13:14:57.296+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:14:57.297+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:14:57.320+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T131456, end_date=20260329T131457
+[2026-03-29T13:14:57.386+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:14:57.471+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:14:57.476+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:42:43.050+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:42:43.097+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:42:43.106+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:42:43.106+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:42:43.120+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:42:43.139+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=480) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:42:43.144+0000] {standard_task_runner.py:63} INFO - Started process 485 to run task
+[2026-03-29T13:42:43.140+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmplithuq2e']
+[2026-03-29T13:42:43.148+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask clean_trade_data
+[2026-03-29T13:42:43.172+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:42:43.222+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 81ff4a14db57
+[2026-03-29T13:42:43.384+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:42:43.385+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:42:43.458+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T13:42:43.459+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:42:43.459+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:42:43.473+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T134243, end_date=20260329T134243
+[2026-03-29T13:42:43.527+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:42:43.560+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:42:43.562+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:53:54.395+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:53:54.453+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:53:54.463+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:53:54.463+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:53:54.477+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:53:54.497+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:53:54.501+0000] {standard_task_runner.py:63} INFO - Started process 340 to run task
+[2026-03-29T13:53:54.497+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpbl8ormm1']
+[2026-03-29T13:53:54.503+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask clean_trade_data
+[2026-03-29T13:53:54.530+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:53:54.628+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 3171732d1af6
+[2026-03-29T13:53:54.774+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:53:54.775+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:53:54.832+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T13:53:54.833+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:53:54.833+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:53:54.846+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T135354, end_date=20260329T135354
+[2026-03-29T13:53:54.879+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:53:54.912+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:53:54.922+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T13:59:05.585+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T13:59:05.738+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:59:05.788+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T13:59:05.789+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T13:59:05.856+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T13:59:05.919+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=353) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T13:59:05.917+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmplcrkqhng']
+[2026-03-29T13:59:05.932+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T13:59:05.923+0000] {standard_task_runner.py:63} INFO - Started process 363 to run task
+[2026-03-29T13:59:05.991+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T13:59:06.076+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 39eebc6a16f6
+[2026-03-29T13:59:06.200+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T13:59:06.202+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T13:59:06.263+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T13:59:06.263+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T13:59:06.265+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T13:59:06.288+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T135905, end_date=20260329T135906
+[2026-03-29T13:59:06.356+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T13:59:06.433+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T13:59:06.436+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:11:39.184+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:11:39.301+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:11:39.311+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:11:39.312+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:11:39.334+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:11:39.370+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=388) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:11:39.373+0000] {standard_task_runner.py:63} INFO - Started process 401 to run task
+[2026-03-29T14:11:39.366+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp43rz5_va']
+[2026-03-29T14:11:39.374+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask clean_trade_data
+[2026-03-29T14:11:39.426+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:11:39.596+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 310a149ce3a7
+[2026-03-29T14:11:39.890+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:11:39.895+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:11:40.016+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T14:11:40.017+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:11:40.017+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:11:40.051+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T141139, end_date=20260329T141140
+[2026-03-29T14:11:40.121+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:11:40.216+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:11:40.220+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:17:26.884+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:17:26.961+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:17:26.973+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:17:26.974+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:17:26.996+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:17:27.020+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=274) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:17:27.016+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpp3hrje7_']
+[2026-03-29T14:17:27.023+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask clean_trade_data
+[2026-03-29T14:17:27.024+0000] {standard_task_runner.py:63} INFO - Started process 280 to run task
+[2026-03-29T14:17:27.053+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:17:27.142+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 78e230e6b695
+[2026-03-29T14:17:27.414+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:17:27.417+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:17:27.488+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T14:17:27.489+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:17:27.490+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:17:27.507+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T141726, end_date=20260329T141727
+[2026-03-29T14:17:27.567+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:17:27.603+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:17:27.604+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:33:07.258+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:33:07.318+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:33:07.341+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:33:07.343+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:33:07.363+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:33:07.386+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=400) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:33:07.389+0000] {standard_task_runner.py:63} INFO - Started process 406 to run task
+[2026-03-29T14:33:07.388+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp72mo88aj']
+[2026-03-29T14:33:07.392+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T14:33:07.437+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:33:07.522+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 3942be4b0136
+[2026-03-29T14:33:07.758+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:33:07.762+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:33:07.826+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T14:33:07.827+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:33:07.827+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:33:07.848+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T143307, end_date=20260329T143307
+[2026-03-29T14:33:07.938+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:33:08.034+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:33:08.041+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T14:45:53.330+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T14:45:53.365+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:45:53.376+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T14:45:53.376+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T14:45:53.391+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T14:45:53.410+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=341) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T14:45:53.411+0000] {standard_task_runner.py:63} INFO - Started process 343 to run task
+[2026-03-29T14:45:53.412+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpfzjs3bii']
+[2026-03-29T14:45:53.419+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask clean_trade_data
+[2026-03-29T14:45:53.440+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T14:45:53.513+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host cd359a9f83a6
+[2026-03-29T14:45:53.641+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T14:45:53.643+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T14:45:53.755+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T14:45:53.756+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T14:45:53.757+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T14:45:53.773+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T144553, end_date=20260329T144553
+[2026-03-29T14:45:53.830+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T14:45:53.863+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T14:45:53.867+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T15:07:38.804+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T15:07:38.852+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:07:38.861+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:07:38.862+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T15:07:38.876+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T15:07:38.896+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=548) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T15:07:38.905+0000] {standard_task_runner.py:63} INFO - Started process 552 to run task
+[2026-03-29T15:07:38.898+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmpn5ix1xr8']
+[2026-03-29T15:07:38.910+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask clean_trade_data
+[2026-03-29T15:07:38.932+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T15:07:38.982+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 2d6484d95a15
+[2026-03-29T15:07:39.130+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T15:07:39.132+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T15:07:39.184+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T15:07:39.184+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T15:07:39.184+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T15:07:39.196+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T150738, end_date=20260329T150739
+[2026-03-29T15:07:39.253+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T15:07:39.276+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T15:07:39.277+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T15:13:15.895+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T15:13:15.949+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:13:15.959+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T15:13:15.960+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T15:13:15.976+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T15:13:15.991+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=312) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T15:13:15.992+0000] {standard_task_runner.py:63} INFO - Started process 320 to run task
+[2026-03-29T15:13:15.991+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp3f49t0oj']
+[2026-03-29T15:13:15.996+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T15:13:16.019+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T15:13:16.071+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 8dbda78c73fd
+[2026-03-29T15:13:16.185+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T15:13:16.187+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T15:13:16.227+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T15:13:16.228+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T15:13:16.229+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T15:13:16.242+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T151315, end_date=20260329T151316
+[2026-03-29T15:13:16.292+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T15:13:16.316+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T15:13:16.318+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:01:05.529+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:01:05.603+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:01:05.613+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:01:05.613+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:01:05.628+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:01:05.645+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=401) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:01:05.648+0000] {standard_task_runner.py:63} INFO - Started process 412 to run task
+[2026-03-29T23:01:05.646+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp37m1hj9t']
+[2026-03-29T23:01:05.651+0000] {standard_task_runner.py:91} INFO - Job 19: Subtask clean_trade_data
+[2026-03-29T23:01:05.670+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:01:05.914+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 6b3b88b70881
+[2026-03-29T23:01:06.118+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:01:06.121+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:01:06.214+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T23:01:06.215+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:01:06.217+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:01:06.240+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T230105, end_date=20260329T230106
+[2026-03-29T23:01:06.319+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:01:06.381+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:01:06.387+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:09:33.818+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:09:33.916+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:09:33.939+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:09:33.941+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:09:34.029+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:09:34.078+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=487) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:09:34.085+0000] {standard_task_runner.py:63} INFO - Started process 499 to run task
+[2026-03-29T23:09:34.081+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmp5shz83ks']
+[2026-03-29T23:09:34.095+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask clean_trade_data
+[2026-03-29T23:09:34.142+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:09:34.209+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 90473cbdc518
+[2026-03-29T23:09:34.581+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:09:34.584+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:09:34.684+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T23:09:34.684+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:09:34.685+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:09:34.699+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T230933, end_date=20260329T230934
+[2026-03-29T23:09:34.762+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:09:34.826+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:09:34.830+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-29T23:22:44.367+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-29T23:22:44.499+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:22:44.517+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [queued]>
+[2026-03-29T23:22:44.518+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-29T23:22:44.542+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_trade_data> on 2026-03-28 00:00:00+00:00
+[2026-03-29T23:22:44.569+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=741) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-29T23:22:44.576+0000] {standard_task_runner.py:63} INFO - Started process 756 to run task
+[2026-03-29T23:22:44.571+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_analytics', 'clean_trade_data', 'scheduled__2026-03-28T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/user_analytics.py', '--cfg-path', '/tmp/tmphuk82r5v']
+[2026-03-29T23:22:44.579+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask clean_trade_data
+[2026-03-29T23:22:44.624+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-29T23:22:44.700+0000] {task_command.py:426} INFO - Running <TaskInstance: user_analytics.clean_trade_data scheduled__2026-03-28T00:00:00+00:00 [running]> on host 17cff4ce87d9
+[2026-03-29T23:22:45.007+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_analytics' AIRFLOW_CTX_TASK_ID='clean_trade_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-28T00:00:00+00:00'
+[2026-03-29T23:22:45.014+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-29T23:22:45.182+0000] {logging_mixin.py:188} INFO - Cleaned data saved to /opt/***/temp/transformed.csv, 10 rows kept.
+[2026-03-29T23:22:45.185+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-29T23:22:45.188+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-29T23:22:45.212+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_analytics, task_id=clean_trade_data, run_id=scheduled__2026-03-28T00:00:00+00:00, execution_date=20260328T000000, start_date=20260329T232244, end_date=20260329T232245
+[2026-03-29T23:22:45.289+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-29T23:22:45.369+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-29T23:22:45.376+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
